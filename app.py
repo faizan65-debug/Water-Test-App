@@ -5,7 +5,12 @@ import numpy as np
 # ----------------------------
 # Load the trained model
 # ----------------------------
-model = pickle.load(open(r"C:\Users\lenovo\HCCDA-AI\Water App\water-test-model", "rb"))
+import os
+import pickle
+
+model_path = os.path.join(os.path.dirname(__file__), "water-test-model")
+with open(model_path, "rb") as f:
+    model = pickle.load(f)
 
 # ----------------------------
 # Streamlit App Config
