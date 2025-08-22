@@ -8,9 +8,11 @@ import numpy as np
 import os
 import pickle
 
-model_path = os.path.join(os.path.dirname(__file__), "water-test-model")
+model_path = os.path.join(os.path.dirname(__file__), "water-test-model.pkl")
+
 with open(model_path, "rb") as f:
     model = pickle.load(f)
+
 
 # ----------------------------
 # Streamlit App Config
